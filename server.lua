@@ -29,17 +29,8 @@ Citizen.CreateThread(function()
 end)
 
 SetHttpHandler(exports.httpmanager:createHttpHandler {
-	if config.passwordProtection then
-	authorization = {
-		["test"] = "$2a$11$rz6qlwyg7k.uE.gtsU0l.OQEKw6.pXSZn/Lgt3xK8gmo5H7vWwgzC" --Password 'testpassword' | Generate password hashes at http://[server IP]:[server port]/httpmanager/password/
-	},
-	end
-	if Config.loggingToggle then 
-		log = true, 
-	else
-		log = false,
-	end
-	logFile = "log.json",
+	if config.passwordProtection then authorization = { ["test"] = "$2a$11$rz6qlwyg7k.uE.gtsU0l.OQEKw6.pXSZn/Lgt3xK8gmo5H7vWwgzC" }, end
+	if Config.loggingToggle then log = true, logFile = "log.json", end
 	routes = {
 		["^/info.json$"] = function(req, res, helpers)
 			local data = {}
