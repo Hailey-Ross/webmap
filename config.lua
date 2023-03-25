@@ -8,3 +8,6 @@ Config.displayWeather = false
 
 -- Enable or disable Logging of user logins (debug)
 Config.loggingToggle = false
+
+-- Enable or disable Password Protection
+Config.passwordProtection = true
