@@ -15,10 +15,9 @@ Live web-based map showing the locations of players and other info about the ser
 # Hash Generation
 
 Hashes can be generated at:  
-http://[server IP]:[server port]/httpmanager/password/  
-OR  
-You can use an example server:  
-http://redm.khzae.net:30120/httpmanager/password/  
+- http://[server IP]:[server port]/httpmanager/password/  
+ OR you can use an example server:  
+- http://redm.khzae.net:30120/httpmanager/password/  
 
 # Installation
 
