@@ -12,15 +12,6 @@ Live web-based map showing the locations of players and other info about the ser
 - [httpmanager](https://github.com/kibook/httpmanager)
 - [weathersync](https://github.com/kibook/redm-weathersync)
 
-# Hash Generation
-
-Hashes can be generated at:  
-- http://[server IP]:[server port]/httpmanager/password/  
-  
- OR you can use an example server:  
-  
-- http://redm.khzae.net:30120/httpmanager/password/  
-
 # Installation
 
 1. Copy to a directory in the `resources` folder of your server.
@@ -36,3 +27,12 @@ Hashes can be generated at:
    - https://kibukj-jqv8ok.users.cfx.re/webmap/
    - http://fivem.khzae.net:30120/webmap/
    - https://kibukj-8l4kjb.users.cfx.re/webmap/
+
+# Hash Generation
+
+After installation of [httpmanager](https://github.com/kibook/httpmanager), you can generate Password Hashes at:  
+- http://[server IP]:[server port]/httpmanager/password/  
+  
+ OR you can use an example server prior to installation of [httpmanager](https://github.com/kibook/httpmanager):  
+  
+- http://redm.khzae.net:30120/httpmanager/password/  
