@@ -33,8 +33,8 @@ SetHttpHandler(exports.httpmanager:createHttpHandler {
 		 Default Password 'testpassword' 
 		 Generate password hashes at http://[server IP]:[server port]/httpmanager/password/ 
 	--]]
-	if config.passwordProtection then authorization = { ["test"] = "$2a$11$rz6qlwyg7k.uE.gtsU0l.OQEKw6.pXSZn/Lgt3xK8gmo5H7vWwgzC" }, end
-	if Config.loggingToggle then log = true, logFile = "log.json", end
+	if config.passwordProtection == true then authorization = { ["test"] = "$2a$11$rz6qlwyg7k.uE.gtsU0l.OQEKw6.pXSZn/Lgt3xK8gmo5H7vWwgzC" }, end
+	if Config.loggingToggle == true then log = true, logFile = "log.json", end
 	routes = {
 		["^/info.json$"] = function(req, res, helpers)
 			local data = {}
