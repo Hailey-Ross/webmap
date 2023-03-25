@@ -6,6 +6,7 @@ Created by [Kibook](https://github.com/kibook/) with edits by [Hailey](https://g
 # Coming Soon
 
 - Password Protection  
+- Playerlist should now Scroll  
 
 # Examples
 
