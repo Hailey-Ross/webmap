@@ -19,7 +19,7 @@ AddEventHandler("webmap:updateInfo", function(playerInfo)
 end)
 
 Citizen.CreateThread(function()
-	print("Access the live map at: " .. exports.httpmanager:getUrl())
+	print("Access your live map at: " .. exports.httpmanager:getUrl())
 
 	while true do
 		prunePlayers()
