@@ -11,4 +11,7 @@ loggingToggle = false
 
 -- Enable or disable Password Protection
 passwordProtection = true  --true/false only
+
+-- Realm deseired for authorization from httpmanager realm file
+realm = "realm1"
 }
