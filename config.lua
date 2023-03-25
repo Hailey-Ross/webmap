@@ -10,4 +10,4 @@ Config.displayWeather = false
 Config.loggingToggle = false
 
 -- Enable or disable Password Protection
-Config.passwordProtection = true
+Config.passwordProtection = true  --true/false only
