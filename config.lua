@@ -6,5 +6,5 @@ Config.updateInterval = 5000
 -- Enable or disable weather info on the live map (requires weathersync if enabled)
 Config.displayWeather = false
 
--- Require Logins to access WebMap?
-Config.requireLogin = true --true/false
+-- Enable or disable Logging of user logins (debug)
+Config.loggingToggle = false
