@@ -33,9 +33,9 @@ SetHttpHandler(exports.httpmanager:createHttpHandler {
 		["test"] = "$2a$11$rz6qlwyg7k.uE.gtsU0l.OQEKw6.pXSZn/Lgt3xK8gmo5H7vWwgzC", --Password 'testpassword'
 		["user"] = "$2a$11$rz6qlwyg7k.uE.gtsU0l.OQEKw6.pXSZn/Lgt3xK8gmo5H7vWwgzC" --Generate password hashes at http://[server IP]:[server port]/httpmanager/password/
 	},
-	access = {
+	--[[access = {
 		{path = "/webmap/.*", login = {["test"] = Config.requireLogin}}
-	},
+	},--]]
 	routes = {
 		["^/info.json$"] = function(req, res, helpers)
 			local data = {}
