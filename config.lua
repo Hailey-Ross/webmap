@@ -11,13 +11,14 @@ Config.loggingToggle = false
 Config.logFilename = "log"
 
 --[[ 
+--     --     --     --     --     --     --     --     --     --     --     -- 
 -- Username / Password pair for using the WebPanel.
 -- Generate Hashes at http://YourServerIP:YourServerPort/httpmanager/password/
+-- Portal Toggle enables Password Protection. true is on, false is off.
 -- Default Username 'default' 
 -- Default Password 'password' 
 -- Password Hash "$2a$11$HoxJPx5sTe4RX5qPw1OkSO.ukDdwAvGJwXtmyOE5i.1gz7EvN71.q"
 --     --     --     --     --     --     --     --     --     --     --     -- 
--- Portal Toggle enables Password Protection. true is on, false is off.
 -- ]]
 Config.portalToggle = false
 Config.username = "default"
