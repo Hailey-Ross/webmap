@@ -5,7 +5,7 @@ Created by [Kibook](https://github.com/kibook/) with edits by [Hailey](https://g
 
 # Added Features
 
-- Password Protection  
+- [Password Protection](https://imgur.com/ALoUcyv.mp4)  
 - Playerlist now Scrolls  
 
 # Examples
