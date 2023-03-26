@@ -1,4 +1,15 @@
 local players = {}
+-- testuser has Password of 'test' and username of 'admin' | unused at this time/TODO
+local testuser = ["admin"] = "$2a$11$xJi6ZPxGZ2KVoBYMNZZkpOhknGzcjLjgFByfSUXBtFt0lYj9yQUzW"
+local Config.realm = UserRealm
+local Config.loggingToggle = logToggler
+local Config.testuserToggle = testuserToggle
+
+--[[if testuserToggle == true then
+	!!TODO!!
+	Add ability for config to set user or use default from above.
+	blah blah blah code here
+end]]
 
 RegisterNetEvent("webmap:updateInfo")
 
@@ -29,8 +40,9 @@ Citizen.CreateThread(function()
 end)
 
 SetHttpHandler(exports.httpmanager:createHttpHandler {
-	if Config.passwordProtection == true then authorization = Config.realm end
-	if Config.loggingToggle == true then log = true, logFile = "log.json", end
+	authorization = UserRealm,
+	log = logToggler,
+	logFile = Config.logFilename .. ".json",
 	routes = {
 		["^/info.json$"] = function(req, res, helpers)
 			local data = {}

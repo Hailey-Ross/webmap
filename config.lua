@@ -1,17 +1,18 @@
-Config = {
+Config = {}
 
 -- How often the server queries information from clients
-updateInterval = 5000
+Config.updateInterval = 5000
 
 -- Enable or disable weather info on the live map (requires weathersync if enabled)
-displayWeather = false
+Config.displayWeather = false
 
--- Enable or disable Logging of user logins (debug)
-loggingToggle = false
+-- Enable or disable Logging of user logins (debug/coming soon)
+Config.loggingToggle = false
+Config.logFilename = "log"
 
--- Enable or disable Password Protection
-passwordProtection = true  --true/false only
+-- COMING SOON/TODO
+Config.testuserToggle = false -- Coming Soon / Don't Touch
 
--- Realm deseired for authorization from httpmanager realm file
-realm = "realm1"
-}
+-- Realm deseired for authorization from httpmanagers realms.lua file
+-- Leave blank as "" to disable password protections with this method
+Config.realm = "realm1"
