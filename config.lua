@@ -12,7 +12,6 @@ Config.logFilename = "log"
 
 --[[ 
 -- Username / Password pair for using the WebPanel.
--- Example: "" is considered blank
 -- Generate Hashes at http://YourServerIP:YourServerPort/httpmanager/password/
 -- Default Username 'default' 
 -- Default Password 'password' 
