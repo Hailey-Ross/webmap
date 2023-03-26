@@ -4,15 +4,22 @@ Config = {}
 Config.updateInterval = 5000
 
 -- Enable or disable weather info on the live map (requires weathersync if enabled)
-Config.displayWeather = false
+Config.displayWeather = true
 
--- Enable or disable Logging of user logins (debug/coming soon)
+-- Enable or disable Logging of user logins (debug/coming soon/Unimplemented at this time)
 Config.loggingToggle = false
 Config.logFilename = "log"
 
--- COMING SOON/TODO
-Config.testuserToggle = false -- Coming Soon / Don't Touch
-
--- Realm deseired for authorization from httpmanagers realms.lua file
--- Leave blank as "" to disable password protections with this method
-Config.realm = "realm1"
+--[[ 
+-- Username / Password pair for using the WebPanel.
+-- Example: "" is considered blank
+-- Generate Hashes at http://YourServerIP:YourServerPort/httpmanager/password/
+-- Default Username 'default' 
+-- Default Password 'password' 
+-- Password Hash "$2a$11$HoxJPx5sTe4RX5qPw1OkSO.ukDdwAvGJwXtmyOE5i.1gz7EvN71.q"
+--
+-- Portal Toggle enables Password Protection. true/false
+-- ]]
+Config.portalToggle = true
+Config.username = "default"
+Config.password = "$2a$11$HoxJPx5sTe4RX5qPw1OkSO.ukDdwAvGJwXtmyOE5i.1gz7EvN71.q"

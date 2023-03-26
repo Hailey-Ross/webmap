@@ -1,16 +1,7 @@
 local players = {}
--- testuser has Password of 'test' and username of 'admin' | unused at this time/TODO Later
---local testuser = ["admin"] = "$2a$11$xJi6ZPxGZ2KVoBYMNZZkpOhknGzcjLjgFByfSUXBtFt0lYj9yQUzW"
-local Config.realm = UserRealm
-local Config.loggingToggle = logToggler
-local Config.testuserToggle = testuserToggle
-
---[[if not UserRealm then
-	!!TODO!!
-	Add ability for config to set user or use default from above.
-	blah blah blah code here
-	print("Coming Soon")
-end]]
+Config.realm = UserRealm
+Config.loggingToggle = logToggler
+Config.testuserToggle = testuserToggle
 
 RegisterNetEvent("webmap:updateInfo")
 
@@ -40,31 +31,64 @@ Citizen.CreateThread(function()
 	end
 end)
 
-SetHttpHandler(exports.httpmanager:createHttpHandler {
-	authorization = UserRealm,
-	log = logToggler,
-	logFile = Config.logFilename .. ".json",
-	routes = {
-		["^/info.json$"] = function(req, res, helpers)
-			local data = {}
+if Config.portalToggle == true then
+	SetHttpHandler(exports.httpmanager:createHttpHandler {
+		authorization = {
+			[Config.username] = Config.password
+		},
+		log = logToggler,
+		logFile = Config.logFilename .. ".json",
+		routes = {
+			["^/info.json$"] = function(req, res, helpers)
+				local data = {}
 
-			data.serverName = GetConvar("sv_projectName", GetConvar("sv_hostname", "Server Name"))
-			data.players = players
+				data.serverName = GetConvar("sv_projectName", GetConvar("sv_hostname", "Server Name"))
+				data.players = players
 
-			if Config.displayWeather then
-				data.time = exports.weathersync:getTime()
-				data.weather = exports.weathersync:getWeather()
-				data.wind = exports.weathersync:getWind()
-				data.forecast = exports.weathersync:getForecast()
+				if Config.displayWeather then
+					data.time = exports.weathersync:getTime()
+					data.weather = exports.weathersync:getWeather()
+					data.wind = exports.weathersync:getWind()
+					data.forecast = exports.weathersync:getForecast()
+				end
+
+				res.sendJson(data)
+			end,
+			["^/config.json$"] = function(req, res, helpers)
+				res.sendJson {
+					gameName = GetConvar("gamename", "gta5"),
+					displayWeather = Config.displayWeather
+				}
 			end
+		}
+	})
 
-			res.sendJson(data)
-		end,
-		["^/config.json$"] = function(req, res, helpers)
-			res.sendJson {
-				gameName = GetConvar("gamename", "gta5"),
-				displayWeather = Config.displayWeather
-			}
-		end
-	}
-})
+else
+	SetHttpHandler(exports.httpmanager:createHttpHandler {
+		log = logToggler,
+		logFile = Config.logFilename .. ".json",
+		routes = {
+			["^/info.json$"] = function(req, res, helpers)
+				local data = {}
+	
+				data.serverName = GetConvar("sv_projectName", GetConvar("sv_hostname", "Server Name"))
+				data.players = players
+	
+				if Config.displayWeather then
+					data.time = exports.weathersync:getTime()
+					data.weather = exports.weathersync:getWeather()
+					data.wind = exports.weathersync:getWind()
+					data.forecast = exports.weathersync:getForecast()
+				end
+	
+				res.sendJson(data)
+			end,
+			["^/config.json$"] = function(req, res, helpers)
+				res.sendJson {
+					gameName = GetConvar("gamename", "gta5"),
+					displayWeather = Config.displayWeather
+				}
+			end
+		}
+	})
+end
