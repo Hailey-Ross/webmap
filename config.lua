@@ -20,6 +20,6 @@ Config.logFilename = "log"
 --
 -- Portal Toggle enables Password Protection. true/false
 -- ]]
-Config.portalToggle = true
+Config.portalToggle = false
 Config.username = "default"
 Config.password = "$2a$11$HoxJPx5sTe4RX5qPw1OkSO.ukDdwAvGJwXtmyOE5i.1gz7EvN71.q"
