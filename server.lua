@@ -1,4 +1,7 @@
 local players = {}
+Config.realm = UserRealm
+Config.loggingToggle = logToggler
+Config.testuserToggle = testuserToggle
 
 RegisterNetEvent("webmap:updateInfo")
 
@@ -19,7 +22,7 @@ AddEventHandler("webmap:updateInfo", function(playerInfo)
 end)
 
 Citizen.CreateThread(function()
-	print("Access the live map at: " .. exports.httpmanager:getUrl())
+	print("Access your live map at: " .. exports.httpmanager:getUrl())
 
 	while true do
 		prunePlayers()
@@ -28,28 +31,64 @@ Citizen.CreateThread(function()
 	end
 end)
 
-SetHttpHandler(exports.httpmanager:createHttpHandler {
-	routes = {
-		["^/info.json$"] = function(req, res, helpers)
-			local data = {}
+if Config.portalToggle == true then
+	SetHttpHandler(exports.httpmanager:createHttpHandler {
+		authorization = {
+			[Config.username] = Config.password
+		},
+		log = logToggler,
+		logFile = Config.logFilename .. ".json",
+		routes = {
+			["^/info.json$"] = function(req, res, helpers)
+				local data = {}
 
-			data.serverName = GetConvar("sv_projectName", GetConvar("sv_hostname", "Server Name"))
-			data.players = players
+				data.serverName = GetConvar("sv_projectName", GetConvar("sv_hostname", "Server Name"))
+				data.players = players
 
-			if Config.displayWeather then
-				data.time = exports.weathersync:getTime()
-				data.weather = exports.weathersync:getWeather()
-				data.wind = exports.weathersync:getWind()
-				data.forecast = exports.weathersync:getForecast()
+				if Config.displayWeather then
+					data.time = exports.weathersync:getTime()
+					data.weather = exports.weathersync:getWeather()
+					data.wind = exports.weathersync:getWind()
+					data.forecast = exports.weathersync:getForecast()
+				end
+
+				res.sendJson(data)
+			end,
+			["^/config.json$"] = function(req, res, helpers)
+				res.sendJson {
+					gameName = GetConvar("gamename", "gta5"),
+					displayWeather = Config.displayWeather
+				}
 			end
+		}
+	})
 
-			res.sendJson(data)
-		end,
-		["^/config.json$"] = function(req, res, helpers)
-			res.sendJson {
-				gameName = GetConvar("gamename", "gta5"),
-				displayWeather = Config.displayWeather
-			}
-		end
-	}
-})
+else
+	SetHttpHandler(exports.httpmanager:createHttpHandler {
+		log = logToggler,
+		logFile = Config.logFilename .. ".json",
+		routes = {
+			["^/info.json$"] = function(req, res, helpers)
+				local data = {}
+	
+				data.serverName = GetConvar("sv_projectName", GetConvar("sv_hostname", "Server Name"))
+				data.players = players
+	
+				if Config.displayWeather then
+					data.time = exports.weathersync:getTime()
+					data.weather = exports.weathersync:getWeather()
+					data.wind = exports.weathersync:getWind()
+					data.forecast = exports.weathersync:getForecast()
+				end
+	
+				res.sendJson(data)
+			end,
+			["^/config.json$"] = function(req, res, helpers)
+				res.sendJson {
+					gameName = GetConvar("gamename", "gta5"),
+					displayWeather = Config.displayWeather
+				}
+			end
+		}
+	})
+end

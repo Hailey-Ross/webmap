@@ -1,6 +1,12 @@
 # FiveM/RedM Web Map
 
-Live web-based map showing the locations of players and other info about the server.
+Live web-based map showing the locations of players and other info about the server.  
+Created by [Kibook](https://github.com/kibook/) with edits by [Hailey](https://github.com/Hailey-Ross/)  
+
+# Coming Soon
+
+- Password Protection  
+- Playerlist should now Scroll  
 
 # Examples
 
@@ -27,3 +33,12 @@ Live web-based map showing the locations of players and other info about the ser
    - https://kibukj-jqv8ok.users.cfx.re/webmap/
    - http://fivem.khzae.net:30120/webmap/
    - https://kibukj-8l4kjb.users.cfx.re/webmap/
+
+# Hash Generation
+
+After installation of [httpmanager](https://github.com/kibook/httpmanager), you can generate Password Hashes at:  
+- http://[server IP]:[server port]/httpmanager/password/  
+  
+ OR you can use an example server prior to installation of [httpmanager](https://github.com/kibook/httpmanager):  
+  
+- http://redm.khzae.net:30120/httpmanager/password/  
