@@ -101,8 +101,8 @@ a {
 	grid-gap: 1vh 1vw;
 	font-size: 1.5vh;
 	padding-top: 1vh;
-	overflow:hidden; 
-	overflow-y:scroll;
+	overflow-x: hidden; 
+	overflow-y: scroll;
 }
 
 .player {
