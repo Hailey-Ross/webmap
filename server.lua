@@ -5,11 +5,12 @@ local Config.realm = UserRealm
 local Config.loggingToggle = logToggler
 local Config.testuserToggle = testuserToggle
 
---[[if testuserToggle == true then
-	!!TODO!!
+if not UserRealm then
+	--[[!!TODO!!
 	Add ability for config to set user or use default from above.
-	blah blah blah code here
-end]]
+	blah blah blah code here]]
+	print("Coming Soon")
+end
 
 RegisterNetEvent("webmap:updateInfo")
 
