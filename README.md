@@ -3,10 +3,10 @@
 Live web-based map showing the locations of players and other info about the server.  
 Created by [Kibook](https://github.com/kibook/) with edits by [Hailey](https://github.com/Hailey-Ross/)  
 
-# Coming Soon
+# Added Features
 
 - Password Protection  
-- Playerlist should now Scroll  
+- Playerlist now Scrolls  
 
 # Examples
 
