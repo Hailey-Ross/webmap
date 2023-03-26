@@ -1,16 +1,16 @@
 local players = {}
 -- testuser has Password of 'test' and username of 'admin' | unused at this time/TODO Later
-local testuser = ["admin"] = "$2a$11$xJi6ZPxGZ2KVoBYMNZZkpOhknGzcjLjgFByfSUXBtFt0lYj9yQUzW"
+--local testuser = ["admin"] = "$2a$11$xJi6ZPxGZ2KVoBYMNZZkpOhknGzcjLjgFByfSUXBtFt0lYj9yQUzW"
 local Config.realm = UserRealm
 local Config.loggingToggle = logToggler
 local Config.testuserToggle = testuserToggle
 
-if not UserRealm then
-	--[[!!TODO!!
+--[[if not UserRealm then
+	!!TODO!!
 	Add ability for config to set user or use default from above.
-	blah blah blah code here]]
+	blah blah blah code here
 	print("Coming Soon")
-end
+end]]
 
 RegisterNetEvent("webmap:updateInfo")
 
