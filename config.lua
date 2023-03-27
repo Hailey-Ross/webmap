@@ -20,6 +20,6 @@ Config.logFilename = "log"
 -- Password Hash "$2a$11$HoxJPx5sTe4RX5qPw1OkSO.ukDdwAvGJwXtmyOE5i.1gz7EvN71.q"
 --     --     --     --     --     --     --     --     --     --     --     -- 
 -- ]]
-Config.portalToggle = false
-Config.username = "default"
-Config.password = "$2a$11$HoxJPx5sTe4RX5qPw1OkSO.ukDdwAvGJwXtmyOE5i.1gz7EvN71.q"
+Config.portalToggle = false -- true enables the Password Protection | false to disable
+Config.username = "default" -- Can be entered as plain text
+Config.password = "$2a$11$HoxJPx5sTe4RX5qPw1OkSO.ukDdwAvGJwXtmyOE5i.1gz7EvN71.q" --THIS MUST BE HASHED - SEE ABOVE COMMENTING BLOCK
