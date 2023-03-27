@@ -118,9 +118,9 @@ function timeToString(time) {
 	return `${String(time.hour).padStart(2, "0")}:${String(time.minute).padStart(2, "0")}:${String(time.second).padStart(2, "0")}`;
 }
 
-/*function dayAndTimeToString(time) {
+function dayAndTimeToString(time) {
 	return `${dayOfWeek(time.day)} ${timeToString(time)}`
-}*/
+}
 
 function mapOnMouseMove(event) {
 	var width  = event.clientX / this.offsetWidth;
@@ -192,7 +192,7 @@ function updateMap() {
 		var wind = document.getElementById("wind");
 
 		if (displayWeather) {
-			time.innerHTML = timeToString(info.time);
+			time.innerHTML = dayAndTimeToString(info.time);
 			weather.innerHTML = weatherIcons[info.weather];
 			weather.title = info.weather;
 			wind.innerHTML = cardinalDirection(info.wind.direction);
