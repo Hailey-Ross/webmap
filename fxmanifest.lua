@@ -10,7 +10,7 @@ url "https://github.com/Hailey-Ross/webmap"
 dependency "httpmanager" -- https://github.com/kibook/httpmanager
 
 -- You can comment this out if you turn off Display Weather in Config
-dependency "weathersync" -- https://github.com/kibook/weathersync
+dependency "weathersync" 
 
 server_scripts {
 	"config.lua",
