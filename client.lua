@@ -1,12 +1,12 @@
 RegisterNetEvent("webmap:updateInfo")
 
 AddEventHandler("webmap:updateInfo", function()
-	local playerPed = PlayerPedId()
+	--local playerPed = PlayerPedId()
 
 	TriggerServerEvent("webmap:updateInfo", {
 		name = GetPlayerName(PlayerId()),
-		coords = GetEntityCoords(playerPed),
-		heading = GetEntityHeading(playerPed),
-		health = GetEntityHealth(playerPed)
+		coords = GetEntityCoords(PlayerId()),
+		heading = GetEntityHeading(PlayerId()),
+		health = GetEntityHealth(PlayerId())
 	})
 end)
