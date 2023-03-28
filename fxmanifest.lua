@@ -10,7 +10,7 @@ url "https://github.com/Hailey-Ross/webmap"
 dependency "httpmanager" -- https://github.com/kibook/httpmanager
 
 -- You can comment this out if you turn off Display Weather in Config
-dependency "weathersync" 
+dependency "weathersync" -- Needs Export support
 
 server_scripts {
 	"config.lua",
@@ -19,7 +19,7 @@ server_scripts {
 
 client_script "client.lua"
 
-version '0.1.1'
+version '0.1.2'
 vorp_checker 'yes'
 vorp_name '^4Resource version Check^3'
 vorp_github 'https://github.com/Hailey-Ross/webmap'

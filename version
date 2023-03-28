@@ -1,7 +1,12 @@
+<0.1.2>
+- Changed old method of getting Player ID's
+- Added max-height Property to Info-Box correcting both playerlist and forecast boxes when they overflow
+- Added max-width Property to Info-Box
+- Added proper !DOCTYPE to index.html removing 'quirk mode'
 <0.1.1>
 - Minor CSS Typo to fix Scrolling Playerlist
 - Better Documentation added to Config
-<0.1>
+<0.1.0>
 - Initial Release Version
 - Added Support for Password Protection
 - Added Support for Scrolling Playerlist
