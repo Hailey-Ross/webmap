@@ -1,7 +1,9 @@
 <0.1.2>
+- Changed old method of getting PlayerID.
+- Added Height Property to Playerlist
+<0.1.1>
 - Minor CSS Typo to fix Scrolling Playerlist
 - Better Documentation added to Config
-- Changed old method of getting PlayerID
 <0.1.0>
 - Initial Release Version
 - Added Support for Password Protection
