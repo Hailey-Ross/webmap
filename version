@@ -5,6 +5,7 @@
 - Added max height Property to Info Box correcting both playerlist and forecast boxes when they overflow
 - Added max width Property to Info Box
 - Added proper !DOCTYPE to index.html removing 'quirk mode'
+- SKIP This Version and use 0.1.3 instead
 <0.1.1>
 - Minor CSS Typo to fix Scrolling Playerlist
 - Better Documentation added to Config
