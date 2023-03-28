@@ -53,6 +53,9 @@ a {
 	background-color: rgba(0, 0, 0, 0.5);
 	padding: 1vh 1vw;
 	color: white;
+	max-height: 85%;
+	overflow-x: hidden; 
+	overflow-y: scroll;
 }
 
 #weather-container {
@@ -101,9 +104,6 @@ a {
 	grid-gap: 1vh 1vw;
 	font-size: 1.5vh;
 	padding-top: 1vh;
-	height: 100%;
-	overflow-x: hidden; 
-	overflow-y: scroll;
 }
 
 .player {
