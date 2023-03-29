@@ -39,7 +39,7 @@ const configUrl = 'config.json';
 const updateUrl = 'info.json';
 
 /* Whether weathersync info is enabled. */
-let displayWeather = false;
+let displayWeather = true;
 
 /* Icons for each type of weather. */
 const gta5WeatherIcons = {
@@ -215,7 +215,7 @@ function updateMap() {
 
 				var playerIdDiv = document.createElement('div');
 				playerIdDiv.className = 'player-id';
-				playerIdDiv.innerHTML = player;
+				playerIdDiv.innerHTML = playerInfo.pid;
 
 				var playerNameDiv = document.createElement('div');
 				playerNameDiv.className = 'player-name';
