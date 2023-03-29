@@ -1,5 +1,5 @@
 <0.1.4>
-- Player ID method changed to GetPlayerServerId()
+- Player ID method changed to GetPlayerServerId(PlayerId())
 - Minor change to script.js 
 <0.1.3>
 - PedID method reverted players no longer appear to all be dead
