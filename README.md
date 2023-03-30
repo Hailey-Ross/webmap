@@ -5,8 +5,8 @@ Created by [Kibook](https://github.com/kibook/) with edits by [Hailey](https://g
 
 # Added Features
 
-- [Password Protection](https://imgur.com/ALoUcyv.mp4)  
-- [Sidebar](https://i.imgur.com/BIsjT01.mp4) now SCrolls when its content overflows 
+- New [Password Protection](https://imgur.com/ALoUcyv.mp4) added as a Toggle  
+- The [Sidebar](https://i.imgur.com/BIsjT01.mp4) now Scrolls when its content overflows  
 
 # Examples
 
