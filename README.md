@@ -44,4 +44,4 @@ After installation of [httpmanager](https://github.com/kibook/httpmanager), you 
 - http://redm.khzae.net:30120/httpmanager/password/  
 
 # Attribution
-The Image for Favicon.ico was provided graciously "as-is" by flaticon.com  
+The Image for [Favicon.ico](https://www.flaticon.com/free-icon/treasure-map_475438?term=map&page=1&position=31&origin=search&related_id=475438) was provided graciously "as-is" by flaticon.com  
