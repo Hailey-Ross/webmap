@@ -16,7 +16,7 @@ Created by [Kibook](https://github.com/kibook/) with edits by [Hailey](https://g
 # Requirements
 
 - [httpmanager](https://github.com/kibook/httpmanager)
-- [weathersync](https://github.com/kibook/redm-weathersync)
+- [Weathersync](https://github.com/Hailey-Ross/weathersync) (Personal Fork)  
 
 # Installation
 
