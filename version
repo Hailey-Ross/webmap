@@ -1,3 +1,10 @@
+<0.1.5>
+- Minor updates to script.js
+- Minor changes to webpage layout
+- Added NEW favicon
+- Major Updates to exports for weathersync compatibility
+- TxAdmin Integration Added
+- Recommended to use Personal Fork of weathersync for BEST compatibility (github.com/Hailey-Ross/weathersync)
 <0.1.4>
 - Player ID method changed to GetPlayerServerId(PlayerId())
 - Minor change to script.js 
