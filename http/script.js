@@ -275,7 +275,7 @@ function updateMap() {
 
 			forecastDiv.innerHTML = "";
 
-			var prevDay;
+			/*var prevDay;*/
 
 			info.forecast.forEach(entry => {
 				/*var dayDiv = document.createElement("div");
