@@ -33,6 +33,17 @@ a {
 	overflow: hidden;
 }
 
+/* Point-zoom Container */
+.map img {
+	transform-origin: 65% 75%;
+	transition: transform 1s, filter .5s ease-out;
+  }
+  
+  /* The Transformation */
+  .map:hover img {
+	transform: scale(1.4);
+  }
+
 #server-name {
 	position: absolute;
 	bottom: 3%;

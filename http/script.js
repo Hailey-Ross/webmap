@@ -298,7 +298,7 @@ function updateMap() {
 				windDiv.className = "forecast-wind";
 				windDiv.innerHTML = cardinalDirection(entry.wind);
 
-				forecastDiv.appendChild(dayDiv);
+				/*forecastDiv.appendChild(dayDiv);*/
 				forecastDiv.appendChild(timeDiv);
 				forecastDiv.appendChild(weatherDiv);
 				forecastDiv.appendChild(windDiv);
