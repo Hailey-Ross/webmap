@@ -278,12 +278,12 @@ function updateMap() {
 			var prevDay;
 
 			info.forecast.forEach(entry => {
-				var dayDiv = document.createElement("div");
+				/*var dayDiv = document.createElement("div");
 				dayDiv.className = "forecast-day";
 				if (entry.day != prevDay) {
 					dayDiv.innerHTML = dayOfWeek(entry.day);
 					prevDay = entry.day;
-				}
+				}*/
 
 				var timeDiv = document.createElement("div");
 				timeDiv.className = "forecast-time";
