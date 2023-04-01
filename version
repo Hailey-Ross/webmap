@@ -2,6 +2,7 @@
 - Minor updates to script.js
 - Minor Compatibility changes to webpage output
 - Added favicon.ico
+- Minor Updates to exports for weathersync
 <0.1.4>
 - Player ID method changed to GetPlayerServerId(PlayerId())
 - Minor change to script.js 
