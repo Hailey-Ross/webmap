@@ -42,3 +42,6 @@ After installation of [httpmanager](https://github.com/kibook/httpmanager), you 
  OR you can use an example server prior to installation of [httpmanager](https://github.com/kibook/httpmanager):  
   
 - http://redm.khzae.net:30120/httpmanager/password/  
+
+# Credits
+The Image for Favicon.ico was provided graciously "as-is" by flaticon.com  
