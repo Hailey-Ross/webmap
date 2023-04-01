@@ -278,13 +278,6 @@ function updateMap() {
 			var prevDay;
 
 			info.forecast.forEach(entry => {
-				/*var dayDiv = document.createElement("div");
-				dayDiv.className = "forecast-day";
-				if (entry.day != prevDay) {
-					dayDiv.innerHTML = dayOfWeek(entry.day);
-					prevDay = entry.day;
-				}*/
-
 				var timeDiv = document.createElement("div");
 				timeDiv.className = "forecast-time";
 				timeDiv.innerHTML = timeToString(entry);
@@ -298,7 +291,6 @@ function updateMap() {
 				windDiv.className = "forecast-wind";
 				windDiv.innerHTML = cardinalDirection(entry.wind);
 
-				/*forecastDiv.appendChild(dayDiv);*/
 				forecastDiv.appendChild(timeDiv);
 				forecastDiv.appendChild(weatherDiv);
 				forecastDiv.appendChild(windDiv);
