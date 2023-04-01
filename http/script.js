@@ -192,7 +192,6 @@ function updateMap() {
 		var wind = document.getElementById("wind");
 
 		if (displayWeather) {
-			/*time.innerHTML = dayAndTimeToString(info.time);*/
 			time.innerHTML = timeToString(info.time);
 			weather.innerHTML = weatherIcons[info.weather];
 			weather.title = info.weather;
