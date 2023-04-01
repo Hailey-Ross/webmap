@@ -9,8 +9,8 @@ url "https://github.com/Hailey-Ross/webmap"
 
 dependency "httpmanager" -- https://github.com/kibook/httpmanager
 
--- You can comment this out if you turn off Display Weather in Config
-dependency "weathersync" -- Needs Export support
+-- You can comment this out if you turn off Displaying Weather in Config
+dependency "weathersync" -- https://github.com/Hailey-Ross/weathersync
 
 server_scripts {
 	"config.lua",
